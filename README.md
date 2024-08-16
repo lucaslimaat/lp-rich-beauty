@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rich Beauty - Parcerias
 
-## Getting Started
+Este projeto consiste na criação de um site voltado para a captação de possíveis parceiros para a empresa Rich Beauty. O site foi desenvolvido com o objetivo de atrair empresas e profissionais do setor de beleza interessados em colaborar, vender produtos e serviços, e expandir seus negócios através do marketplace da Rich Beauty.
 
-First, run the development server:
+## Funcionalidades
+
+- **Formulário de Contato Personalizado**: Um formulário intuitivo para potenciais parceiros enviarem suas informações e demonstrarem interesse em colaborar com a Rich Beauty.
+- **Landing Page Informativa**: Página principal com detalhes sobre a empresa, benefícios da parceria e como funciona o processo de integração.
+- **Integração com Redes Sociais**: Links e ícones para perfis nas redes sociais da Rich Beauty, facilitando a conexão e divulgação.
+- **Seção de Perguntas Frequentes**: Respostas para as dúvidas mais comuns dos possíveis parceiros, proporcionando maior clareza sobre o processo.
+- **Animações e Transições Suaves**: Animações sutis para melhorar a experiência do usuário ao navegar pelo site, tornando-o mais atraente e moderno.
+- **Compatibilidade Mobile**: Design responsivo que garante uma experiência de navegação fluida em dispositivos móveis e tablets.
+
+## Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/) - Framework React para desenvolvimento de aplicações web com renderização server-side e geração de páginas estáticas.
+- [TypeScript](https://www.typescriptlang.org/) - Superset do JavaScript que adiciona tipagem estática ao código, aumentando a segurança e a produtividade.
+- [Tailwind CSS](https://tailwindcss.com/) - Framework de CSS utilitário que permite criar layouts modernos e responsivos de forma rápida e customizável.
+
+
+## Pré-requisitos
+
+Antes de começar, certifique-se de que você atendeu aos seguintes requisitos:
+
+- Você instalou o [Node.js](https://nodejs.org/) na versão `14.x` ou superior.
+- Você tem um gerenciador de pacotes como [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/) instalado.
+- Você tem conhecimentos básicos em [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/) e [Tailwind CSS](https://tailwindcss.com/).
+
+
+## Instalação
+
+Siga os passos abaixo para clonar e configurar o projeto localmente:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone este repositório
+$ git clone https://github.com/lucaslimaat/lp-rich-beauty.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd lp-rich-beauty
+
+# Instale as dependências
+$ npm install
+
+# Execute o aplicativo em modo de desenvolvimento
+$ npm run dev
 ```
+## Licença
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este projeto está licenciado sob a Licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contato
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Se você tiver alguma dúvida ou quiser saber mais sobre o projeto, entre em contato:
 
-## Learn More
+**Nome:** Lucas Lima Torquato  
+**E-mail:** [lucaslimatorquato@hotmail.com](mailto:lucaslimatorquato@hotmail.com)  
+**LinkedIn:** [Seu LinkedIn](https://www.linkedin.com/in/lucaslimaat)  
+**GitHub:** [Seu GitHub](https://github.com/lucaslimaat)
 
-To learn more about Next.js, take a look at the following resources:
+Link do projeto: [https://github.com/lucaslimaat/lp-rich-beauty](https://github.com/lucaslimaat/lp-rich-beauty)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
