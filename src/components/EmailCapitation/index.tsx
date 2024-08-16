@@ -7,7 +7,7 @@ export default function EmailCapitation() {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { 
     e.preventDefault()
     setError('')
     setSuccess('')
@@ -18,7 +18,6 @@ export default function EmailCapitation() {
       return
     }
 
-    // Simular um envio de email
     setTimeout(() => {
       setSuccess('Email cadastrado com sucesso!')
       setEmail('')
