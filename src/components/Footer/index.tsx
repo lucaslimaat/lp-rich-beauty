@@ -12,7 +12,7 @@ export default function Footer() {
         <p className=' font-normal text-sm text-gray w-[333px] text-center md:text-start'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate erat vitae ante sagittis, sit amet pharetra augue semper.</p>
         <div className=' w-auto md:flex flex-row justify-center items-center gap-4 hidden'>
           <FaFacebook size={36}  />
-          <FaInstagram size={36} />
+          <Link href="https://www.instagram.com/rich_beauty_delivery/" target="_blanck"><FaInstagram size={36} /></Link>
           <FaLinkedin size={36} />
         </div>
       </div>
@@ -22,7 +22,7 @@ export default function Footer() {
       </div>
       <div className=' w-auto flex flex-row justify-start items-start gap-4 md:hidden'>
           <FaFacebook size={36}  />
-          <FaInstagram size={36} />
+          <Link href="https://www.instagram.com/rich_beauty_delivery/" target="_blanck"><FaInstagram size={36} /></Link>
           <FaLinkedin size={36} />
         </div>
       <div className=' w-auto h-auto md:flex flex-col justify-start items-start gap-8 hidden'>

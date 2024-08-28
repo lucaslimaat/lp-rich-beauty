@@ -27,7 +27,7 @@ export default function Hero() {
             height={364} 
         />
         </div>
-        
+
       </div>
     </div>
   )

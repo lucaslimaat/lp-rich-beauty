@@ -25,7 +25,7 @@ export default function EmailCapitation() {
   }
 
   return (
-    <div className="bg-white-gray w-full h-auto flex flex-col items-center">
+    <div id="parceiro" className="bg-white-gray w-full h-auto flex flex-col items-center">
       <div className="bg-white-gray w-full h-auto flex flex-col items-center my-24 gap-20">
         <h1 className=' text-5xl font-normal text-center'>Pronto para Crescer Conosco?</h1>
         <Balancer>

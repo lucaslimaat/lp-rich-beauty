@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <News />
-      <Benefits />
       <HowWorks />
+      <Benefits />
+      <News />
       <Feedbacks />
       <EmailCapitation />
     </main>
