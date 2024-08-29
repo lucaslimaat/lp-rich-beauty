@@ -2,6 +2,11 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import { MenuItem } from '../MenuItem'
 
+export const navbarItems = [
+  { text: 'Home', link: '/' },
+  { text: 'Contato', link: '/Contato' },
+]
+
 const variants = {
   open: {
     opacity: 1,
@@ -20,12 +25,10 @@ const variants = {
   },
 }
 
-const itemIds = ['Home', 'Contato']
-
 export const Navigation = () => (
   <motion.ul variants={variants} className="m-0 p-6 ">
-    {itemIds.map((i) => (
-      <MenuItem text={i} key={i} />
-    ))}
-  </motion.ul>
+      {navbarItems.map(({ text, link }) => (
+        <MenuItem text={text} key={text} link={link} />
+      ))}
+    </motion.ul>
 )

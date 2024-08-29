@@ -14,7 +14,7 @@ export default function News() {
       <div className=" w-full  md:h-auto flex flex-wrap-reverse h-screen items-center justify-center md:my-24 my-7 md:gap-20 gap-5">
         <div className="  h-auto flex flex-col items-center">
           <h2 className='text-3xl font-medium mb-8'>Assista ao Vídeo</h2>
-          <video className="max-w-[500px] h-auto rounded-[40px]" controls>
+          <video className="max-w-[500px] h-auto rounded-[40px] w-full m-2" controls>
             <source src="/video_rich.mp4" type="video/mp4" />
             Seu navegador não suporta a tag de vídeo.
           </video>

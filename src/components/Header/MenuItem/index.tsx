@@ -1,8 +1,10 @@
-import * as React from 'react'
+'use client'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 interface menuItemProps {
   text: string
+  link: string
 }
 
 const variants = {
@@ -22,7 +24,7 @@ const variants = {
   },
 }
 
-export const MenuItem = ({ text }: menuItemProps) => {
+export const MenuItem = ({ text, link }: menuItemProps) => {
   return (
     <motion.li
       variants={variants}
@@ -30,7 +32,12 @@ export const MenuItem = ({ text }: menuItemProps) => {
       whileTap={{ scale: 0.95 }}
       className="p-2 list-none mb-5 flex items-center cursor-pointer text-2xl"
     >
-      <a className="w-52 h-5 flex-[1] border-white rounded-sm z-40 text-white">{text}</a>
+      <Link
+        href={link}
+        className="w-52 h-5 flex-[1] border-white rounded-sm z-40 text-white"
+      >
+        {text}
+      </Link>
     </motion.li>
   )
 }
