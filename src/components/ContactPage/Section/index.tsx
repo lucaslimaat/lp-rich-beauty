@@ -111,7 +111,7 @@ export default function SectionContact() {
           <textarea
             className='appearance-none border-b-2 border-gray-400 w-full py-2 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
             id='message'
-            rows='4'
+            rows={4}
           ></textarea>
           <label
             className='absolute left-1 top-0 text-gray-300 text-xs font-medium mb-2 transition-colors duration-1000 peer-focus:text-black'
