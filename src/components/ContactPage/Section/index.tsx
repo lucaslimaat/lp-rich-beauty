@@ -60,7 +60,7 @@ export default function SectionContact() {
       <div className='w-full md:w-1/2 px-3'>
         <div className="relative">
           <input
-            className='appearance-none border-b-2 border-gray-400 w-full py-2 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
+            className='appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
             id='lastName'
             type='text'
           />
@@ -77,7 +77,7 @@ export default function SectionContact() {
       <div className='w-full md:w-1/2 px-3 mb-4 md:mb-0'>
         <div className="relative">
           <input
-            className='appearance-none border-b-2 border-gray-400 w-full py-2 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
+            className='appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
             id='email'
             type='email'
           />
@@ -92,7 +92,7 @@ export default function SectionContact() {
       <div className='w-full md:w-1/2 px-3'>
         <div className="relative">
           <input
-            className='appearance-none border-b-2 border-gray-400 w-full py-2 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
+            className='appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
             id='phone'
             type='text'
           />
@@ -109,7 +109,7 @@ export default function SectionContact() {
       <div className='w-full px-3'>
         <div className="relative">
           <textarea
-            className='appearance-none border-b-2 border-gray-400 w-full py-2 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
+            className='appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer'
             id='message'
             rows={4}
           ></textarea>
@@ -124,7 +124,7 @@ export default function SectionContact() {
     </div>
     <div className='flex items-center justify-center'>
       <button
-        className='bg-black hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+        className='bg-green text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
         type='button'
       >
         Enviar

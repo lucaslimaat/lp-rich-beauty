@@ -9,7 +9,9 @@ export default function Footer() {
     <div className="bg-white w-auto h-auto flex flex-wrap items-start md:gap-24 gap-10 my-12 mx-28 justify-center">
       <div className=' w-auto h-auto flex flex-col md:justify-start md:items-start gap-8 justify-center items-center'>
         <h1 className=' font-bold text-lg'>Rich Beauty</h1>
-        <p className=' font-normal text-sm text-gray w-[333px] text-center md:text-start'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate erat vitae ante sagittis, sit amet pharetra augue semper.</p>
+        <p className=' font-normal text-sm text-gray w-[333px] text-center md:text-start'>
+          Um ecossistema de inovação e empreendedorismo para negócios nas áreas de saúde, beleza e bem-estar.
+        </p>
         <div className=' w-auto md:flex flex-row justify-center items-center gap-4 hidden'>
           <FaFacebook size={36}  />
           <Link href="https://www.instagram.com/rich_beauty_delivery/" target="_blanck"><FaInstagram size={36} /></Link>

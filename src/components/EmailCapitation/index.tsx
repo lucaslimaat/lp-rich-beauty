@@ -27,10 +27,12 @@ export default function EmailCapitation() {
   return (
     <div id="parceiro" className="bg-white-gray w-full h-auto flex flex-col items-center">
       <div className="bg-white-gray w-full h-auto flex flex-col items-center my-24 gap-20">
-        <h1 className=' text-5xl font-normal text-center'>Pronto para Crescer Conosco?</h1>
-        <Balancer>
-          <p className=' text-3xl md:text-3xl font-light text-center'>Cadastre-se agora e comece a vender no melhor marketplace de beleza!</p>
-        </Balancer>
+        <h1 className=' text-5xl font-normal text-center'>Vamos Crescer Juntos?</h1>
+          <p className=' text-3xl md:text-3xl font-light text-center'>
+            <Balancer>
+              Cadastre-se agora e faça parte de nosso marketplace!
+            </Balancer>
+          </p>
         <form onSubmit={handleSubmit} className='w-full h-auto flex flex-wrap items-center justify-center gap-5'>
           <input 
             type='email' 

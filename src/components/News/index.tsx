@@ -20,12 +20,16 @@ export default function News() {
           </video>
         </div>
         <div className=' w-full max-w-[517px] h-auto flex flex-col items-center md:items-start justify-center md:gap-[40px] gap-5 mx-4'>
-          <Balancer>
-            <h1 className=' text-[32px] md:text-[32px] font-bold text-center md:text-start leading-[48px]'>Descubra as novidades no nosso marcketplace</h1>
-          </Balancer>
-          <Balancer>
-            <p className=' text-xl font-medium  text-gray-900 text-center md:text-start'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi ac phasellus placerat a pellentesque tellus sed egestas. Et tristique dictum sit tristique sed non. Lacinia lorem id consectetur pretium diam ut. Pellentesque eu sit blandit fringilla risus faucibus..</p>
-          </Balancer>
+            <h1 className=' text-[32px] md:text-[32px] font-bold text-center md:text-start leading-[48px]'>
+              <Balancer>  
+                Saiba mais sobre nosso ecossistema
+              </Balancer>
+            </h1>     
+            <p className=' text-xl font-medium  text-gray-900 text-center md:text-start'>
+              <Balancer>  
+                Entenda como a Rich Beauty trabalha para capacitar e promover profissionais e negócios nas áreas de saúde, beleza e bem-estar.
+              </Balancer>
+            </p>
           <Link href="#parceiro">
             <button 
               className='px-10 h-12 rounded-full border-2 border-green bg-green text-white font-semibold transition-transform duration-300 transform hover:scale-105 hover:bg-dark-green'
