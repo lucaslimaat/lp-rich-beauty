@@ -48,11 +48,11 @@ export default function Feedbacks() {
                   </div>
                 </div>
                 <h1 className='font-bold text-2xl text-center'>It was a very good experience</h1>
-                <Balancer>
-                  <p className='font-medium text-sm text-center text-black'>
+                <p className='font-medium text-sm text-center text-black'>
+                  <Balancer>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-                  </p>
-                </Balancer>
+                  </Balancer>
+                </p>
               </div>
             </SplideSlide>
             <SplideSlide>
@@ -74,11 +74,11 @@ export default function Feedbacks() {
                   </div>
                 </div>
                 <h1 className='font-bold text-2xl text-center'>It was a very good experience</h1>
-                <Balancer>
-                  <p className='font-medium text-sm text-center text-black'>
+                <p className='font-medium text-sm text-center text-black'>
+                  <Balancer>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-                  </p>
-                </Balancer>
+                  </Balancer>
+                </p>
               </div>
             </SplideSlide>
             <SplideSlide>
@@ -100,11 +100,11 @@ export default function Feedbacks() {
                   </div>
                 </div>
                 <h1 className='font-bold text-2xl text-center'>It was a very good experience</h1>
-                <Balancer>
-                  <p className='font-medium text-sm text-center text-black'>
+                <p className='font-medium text-sm text-center text-black'>
+                  <Balancer>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
-                  </p>
-                </Balancer>
+                  </Balancer>
+                </p>
               </div>
             </SplideSlide>
             

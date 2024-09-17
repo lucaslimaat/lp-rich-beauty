@@ -8,15 +8,17 @@ export default function SectionContact() {
     <div className="bg-white w-full h-auto flex flex-col items-center gap-5 md:gap-12 ">
       <div className="bg-white w-full h-auto flex flex-col items-center gap-[10px]">
         <h1 className='text-5xl font-bold'>Nos Contate</h1>
-        <Balancer>
-          <p className=' text-lg md:text-lg font-medium text-center text-gray-300'>Any question or remarks? Just write us a message!</p>
-        </Balancer>
+        <p className=' text-lg md:text-lg font-medium text-center text-gray-300'>
+          <Balancer>
+            Alguma pergunta ou observação? Basta nos escrever uma mensagem!
+          </Balancer>
+        </p>
       </div>
       <div className=' w-full h-auto bg-white flex flex-wrap items-start justify-center p-5 gap-12'>
         <div className=' h-full w-full max-w-[491px] flex flex-col items-center justify-center md:items-start md:Sjustify-start bg-green rounded-[10px] gap-9 md:gap-28 px-[40px] py-[40px]'>
           <div className=' flex flex-col gap-[6px]'>
             <h1 className='text-white font-semibold text-xl md:text-[28px] text-center'>Informações de Contato</h1>
-            <p className=' text-gray-200 text-[11px] md:text-lg font-normal text-center md:text-start'>Say something to start a live chat!</p>
+            <p className=' text-gray-200 text-[11px] md:text-lg font-normal text-center md:text-start'>Diga algo para iniciar uma conversa!</p>
           </div>
           <div className=' flex flex-col gap-[50px] items-center justify-center md:items-start md:justify-start'>
             <div className=' flex flex-col md:flex-row gap-6 items-center justify-center '>

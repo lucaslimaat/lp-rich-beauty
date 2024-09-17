@@ -1,20 +1,12 @@
 'use client'
 import Balancer from 'react-wrap-balancer'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function EmailCapitation() {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
-  const [emailList, setEmailList] = useState<string[]>([])
-
-  // Carregar emails salvos no localStorage quando o componente montar
-  useEffect(() => {
-    const savedEmails = localStorage.getItem('emailList')
-    if (savedEmails) {
-      setEmailList(JSON.parse(savedEmails))
-    }
-  }, [])
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { 
     e.preventDefault()
@@ -27,10 +19,11 @@ export default function EmailCapitation() {
       return
     }
 
-    // Salvar email
-    const updatedEmailList = [...emailList, email]
-    setEmailList(updatedEmailList)
-    localStorage.setItem('emailList', JSON.stringify(updatedEmailList))
+    const templateParams = {
+      email: email,
+    }
+
+    emailjs.send("service_25yt4or", "template_n9dx1tq", templateParams, "ZNtoT5iD1Rm__8tOD")
 
     setTimeout(() => {
       setSuccess('Email cadastrado com sucesso!')
