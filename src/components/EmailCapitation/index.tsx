@@ -2,11 +2,13 @@
 import Balancer from 'react-wrap-balancer'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useRouter } from 'next/navigation'
 
 export default function EmailCapitation() {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
+  const router = useRouter() 
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { 
     e.preventDefault()
@@ -24,10 +26,15 @@ export default function EmailCapitation() {
     }
 
     emailjs.send("service_25yt4or", "template_n9dx1tq", templateParams, "ZNtoT5iD1Rm__8tOD")
-
+    
     setTimeout(() => {
       setSuccess('Email cadastrado com sucesso!')
       setEmail('')
+      
+      setTimeout(() => {
+        router.push('/Contato') 
+      }, 1000)
+
     }, 1000)
   }
 

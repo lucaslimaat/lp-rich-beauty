@@ -12,7 +12,7 @@ export default function Benefits() {
             <Balancer>Quais as vantagens?</Balancer>
           </p>
 
-        <div className="bg-white w-full h-auto flex flex-wrap items-center justify-evenly">
+        <div className="bg-white w-full h-auto flex flex-wrap items-center justify-evenly gap-20 md:gap-0">
           <div className='flex flex-col items-center gap-4'>
             <UserCircle size={72} color="#00cbc8" />
             <p className='font-bold text-base'>Capilarização</p>

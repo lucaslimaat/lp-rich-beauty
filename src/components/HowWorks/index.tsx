@@ -7,7 +7,7 @@ export default function HowWorks() {
     <div className="bg-white-gray w-full h-auto flex flex-col items-center ">
       <div className="bg-white-gray w-full h-auto flex flex-col items-center my-24 gap-20 ">
         <h1 className=' text-5xl font-normal'>Como funciona?</h1>
-        <div className="bg-white-gray w-full h-auto flex flex-wrap items-center justify-evenly">
+        <div className="bg-white-gray w-full h-auto flex flex-wrap items-center justify-evenly gap-20 md:gap-0">
           <div className=' flex flex-col items-center gap-4'>
             <NumberCircleOne size={72} color="#00cbc8" />
             <p className=' font-bold text-base'>Cadastre-se</p>
