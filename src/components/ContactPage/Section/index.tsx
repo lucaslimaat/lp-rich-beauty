@@ -49,7 +49,7 @@ export default function SectionContact() {
   }
 
   return (
-    <div className="bg-white w-full h-screen flex flex-col items-center justify-center gap-5 md:gap-12">
+    <div className="bg-white w-full h-auto flex flex-col items-center justify-center gap-5 md:gap-12 py-14">
       <div className="bg-white w-full h-auto flex flex-col items-center gap-[10px]">
         <h1 className="text-5xl font-bold">Nos Contate</h1>
         <p className="text-lg md:text-lg font-medium text-center text-gray-300">
