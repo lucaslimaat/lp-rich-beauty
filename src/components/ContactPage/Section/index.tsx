@@ -1,50 +1,64 @@
 'use client'
-import { useState } from 'react'
 import { Envelope, MapPin, Phone } from 'phosphor-react'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import Balancer from 'react-wrap-balancer'
 import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import * as yup from 'yup'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+
+// Define o esquema de validação Yup
+const schema = yup.object().shape({
+  firstName: yup.string().required('Primeiro nome é obrigatório'),
+  lastName: yup.string().required('Sobrenome é obrigatório'),
+  email: yup
+    .string()
+    .email('Email inválido')
+    .required('Email é obrigatório'),
+  phone: yup
+    .string()
+    .matches(
+      /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/,
+      'Telefone inválido. Use o formato (XX)XXXXX-XXXX ou (XX)XXXX-XXXX'
+    )
+    .required('Telefone é obrigatório'),
+  message: yup.string().required('Mensagem é obrigatória'),
+})
 
 export default function SectionContact() {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [message, setMessage] = useState('')
-  const [error, setError] = useState('')
-  const [success, setSuccess] = useState('')
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setError('')
-    setSuccess('')
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailPattern.test(email)) {
-      setError('Por favor, insira um email válido.')
-      return
-    }
-
+  const onSubmit = (data: any) => {
     const templateParams = {
-      firstName,
-      lastName,
-      email,
-      phone,
-      message,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      phone: data.phone,
+      message: data.message,
     }
 
     emailjs
-      .send('service_25yt4or', 'template_z4guyqp', templateParams, 'ZNtoT5iD1Rm__8tOD')
+      .send(
+        'service_25yt4or',
+        'template_z4guyqp',
+        templateParams,
+        'ZNtoT5iD1Rm__8tOD',
+      )
       .then(() => {
-        setSuccess('Mensagem enviada com sucesso!')
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setPhone('')
-        setMessage('')
+        toast.success('Mensagem enviada com sucesso!')
+        reset()
       })
       .catch(() => {
-        setError('Ocorreu um erro ao enviar a mensagem. Tente novamente.')
+        toast.error('Ocorreu um erro ao enviar a mensagem. Tente novamente.')
       })
   }
 
@@ -58,9 +72,9 @@ export default function SectionContact() {
           </Balancer>
         </p>
       </div>
-      <div className="w-full h-auto bg-white flex flex-wrap items-start justify-center p-5 gap-12">
+      <div className="w-full h-auto bg-white flex flex-wrap-reverse items-center justify-center p-5 gap-12">
         <div className="h-full w-full max-w-[491px] flex flex-col items-center justify-center md:items-start bg-green rounded-[10px] gap-9 md:gap-28 px-[40px] py-[40px]">
-          <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col gap-[6px]">
             <h1 className="text-white font-semibold text-xl md:text-[28px] text-center">
               Informações de Contato
             </h1>
@@ -95,41 +109,35 @@ export default function SectionContact() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center mt-14">
-          <form className="w-full max-w-lg" onSubmit={handleSubmit}>
+        <div className="flex flex-wrap items-center justify-center mt-14 ">
+          <form className="w-full max-w-lg flex flex-col md:gap-11" onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-wrap -mx-3 mb-4">
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <div className="relative">
                   <input
-                    className="appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer"
-                    id="firstName"
-                    type="text"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    className={`appearance-none border-b-2 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none transition-colors duration-1000 peer ${
+                      errors.firstName ? 'border-red' : 'border-gray-400'
+                    } focus:${errors.firstName ? 'border-red' : 'border-black'}`}
+                    {...register('firstName')}
                   />
-                  <label
-                    className="absolute left-1 top-0 text-gray-300 text-xs font-medium mb-2 transition-colors duration-1000 peer-focus:text-black"
-                    htmlFor="firstName"
-                  >
+                  <label className={`absolute left-1 top-0 text-xs font-medium mb-2 peer-focus:text-black ${errors.firstName ? 'text-red' : 'text-gray-300'}`}>
                     Primeiro Nome
                   </label>
+                  <p className="text-red">{errors.firstName?.message}</p>
                 </div>
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <div className="relative">
                   <input
-                    className="appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer"
-                    id="lastName"
-                    type="text"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
+                    className={`appearance-none border-b-2 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none transition-colors duration-1000 peer ${
+                      errors.lastName ? 'border-red' : 'border-gray-400'
+                    } focus:${errors.lastName ? 'border-red' : 'border-black'}`}
+                    {...register('lastName')}
                   />
-                  <label
-                    className="absolute left-1 top-0 text-gray-300 text-xs font-medium mb-2 transition-colors duration-1000 peer-focus:text-black"
-                    htmlFor="lastName"
-                  >
+                  <label className={`absolute left-1 top-0 text-xs font-medium mb-2 peer-focus:text-black ${errors.lastName ? 'text-red' : 'text-gray-300'}`}>
                     Sobrenome
                   </label>
+                  <p className="text-red">{errors.lastName?.message}</p>
                 </div>
               </div>
             </div>
@@ -137,35 +145,29 @@ export default function SectionContact() {
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <div className="relative">
                   <input
-                    className="appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer"
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    className={`appearance-none border-b-2 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none transition-colors duration-1000 peer ${
+                      errors.email ? 'border-red' : 'border-gray-400'
+                    } focus:${errors.email ? 'border-red' : 'border-black'}`}
+                    {...register('email')}
                   />
-                  <label
-                    className="absolute left-1 top-0 text-gray-300 text-xs font-medium mb-2 transition-colors duration-1000 peer-focus:text-black"
-                    htmlFor="email"
-                  >
+                  <label className={`absolute left-1 top-0 text-xs font-medium mb-2 peer-focus:text-black ${errors.email ? 'text-red' : 'text-gray-300'}`}>
                     Email
                   </label>
+                  <p className="text-red">{errors.email?.message}</p>
                 </div>
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <div className="relative">
                   <input
-                    className="appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer"
-                    id="phone"
-                    type="text"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    className={`appearance-none border-b-2 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none transition-colors duration-1000 peer ${
+                      errors.phone ? 'border-red' : 'border-gray-400'
+                    } focus:${errors.phone ? 'border-red' : 'border-black'}`}
+                    {...register('phone')}
                   />
-                  <label
-                    className="absolute left-1 top-0 text-gray-300 text-xs font-medium mb-2 transition-colors duration-1000 peer-focus:text-black"
-                    htmlFor="phone"
-                  >
+                  <label className={`absolute left-1 top-0 text-xs font-medium mb-2 peer-focus:text-black ${errors.phone ? 'text-red' : 'text-gray-300'}`}>
                     Telefone
                   </label>
+                  <p className="text-red">{errors.phone?.message}</p>
                 </div>
               </div>
             </div>
@@ -173,34 +175,28 @@ export default function SectionContact() {
               <div className="w-full px-3">
                 <div className="relative">
                   <textarea
-                    className="appearance-none border-b-2 border-gray-400 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none focus:border-black transition-colors duration-1000 peer"
-                    id="message"
+                    className={`appearance-none border-b-2 w-full pt-4 px-1 text-gray-700 leading-tight focus:outline-none transition-colors duration-1000 peer ${
+                      errors.message ? 'border-red' : 'border-gray-400'
+                    } focus:${errors.message ? 'border-red' : 'border-black'}`}
                     rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    {...register('message')}
                   ></textarea>
-                  <label
-                    className="absolute left-1 top-0 text-gray-300 text-xs font-medium mb-2 transition-colors duration-1000 peer-focus:text-black"
-                    htmlFor="message"
-                  >
+                  <label className={`absolute left-1 top-0 text-xs font-medium mb-2 peer-focus:text-black ${errors.message ? 'text-red' : 'text-gray-300'}`}>
                     Mensagem
                   </label>
+                  <p className="text-red">{errors.message?.message}</p>
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <button
-                className="bg-green text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="submit"
-              >
-                Enviar
+              <button className="bg-green text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                Enviar Mensagem
               </button>
             </div>
-            {error && <p className="text-red-500">{error}</p>}
-            {success && <p className="text-green-500">{success}</p>}
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   )
 }
