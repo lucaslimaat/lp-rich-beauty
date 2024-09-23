@@ -69,11 +69,12 @@ export default function EmailCapitation() {
         >
           <input
             type="email"
-            className="block px-3 max-w-[283px] h-12 rounded-full border-2 border-green text-sm text-slate-500 font-semibold"
+            className="block px-3 max-w-[283px] h-12 rounded-full border-2 border-gray-300 text-sm text-slate-500 font-semibold placeholder-gray-400 focus:border-green focus:outline-none transition-colors duration-300 ease-in-out"
             placeholder="Digite seu email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+
           <button
             type="submit"
             className="px-10 h-12 rounded-full border-2 border-green bg-green text-white font-semibold transition-transform duration-300 transform hover:scale-105 hover:bg-dark-green"

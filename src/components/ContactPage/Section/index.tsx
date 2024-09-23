@@ -9,7 +9,6 @@ import * as yup from 'yup'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-// Define o esquema de validação Yup
 const schema = yup.object().shape({
   firstName: yup.string().required('Primeiro nome é obrigatório'),
   lastName: yup.string().required('Sobrenome é obrigatório'),

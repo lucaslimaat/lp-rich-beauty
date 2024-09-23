@@ -10,8 +10,8 @@ export default function Home() {
     <main className="">
       <Hero />
       <HowWorks />
-      <Benefits />
       <News />
+      <Benefits />
       <Feedbacks />
       <EmailCapitation />
     </main>

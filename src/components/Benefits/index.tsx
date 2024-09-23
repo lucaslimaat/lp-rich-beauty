@@ -46,8 +46,8 @@ export default function Benefits() {
             </p>
           </div>
         </div>
-
-        <div className="w-auto h-auto flex flex-row items-center justify-center gap-14 mx-4">
+       {/*
+       <div className="w-auto h-auto flex flex-row items-center justify-center gap-14 mx-4">
           <div className="w-auto h-auto flex flex-col items-end justify-center gap-14 mx-4">
             <Image
               src="/beauty.svg"
@@ -71,6 +71,7 @@ export default function Benefits() {
             />
           </div>
         </div>
+        */}     
       </div>
     </div>
   )
