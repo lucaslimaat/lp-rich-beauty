@@ -36,13 +36,9 @@ export default function EmailCapitation() {
     setTimeout(() => {
       setEmail('')
 
-      // Exibir toast de sucesso
       toast.success('Email cadastrado com sucesso!')
-
-      // Exibir o toast de redirecionamento
       toast.info('Aguarde, você está sendo redirecionado para o nosso formulário.')
 
-      // Redirecionar para a página de contato após 3 segundos
       setTimeout(() => {
         router.push('/Contato')
       }, 3000)

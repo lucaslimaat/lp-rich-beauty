@@ -3,6 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { Star } from 'phosphor-react';
 import Balancer from 'react-wrap-balancer';
+import Image from 'next/image';
 
 export default function Feedbacks() {
   return (
@@ -30,79 +31,100 @@ export default function Feedbacks() {
             }}
           >
             <SplideSlide>
-              <div className='w-full max-w-[396px] h-[423px] bg-white-gray flex flex-col items-center justify-center px-5 shadow-lg rounded-xl gap-6'>
-                <div className='flex flex-row items-center justify-start w-full gap-3'>
-                  <div className='w-[72px] min-w-[72px] h-[72px] rounded-full bg-white'></div>
+              <div className='w-full max-w-[396px] h-[423px] bg-white-gray flex flex-col items-center justify-start px-5 shadow-lg rounded-xl gap-6'>
+                <div className='flex flex-row items-center justify-start w-full gap-3 mt-10'>
+                  <div className='w-[72px] min-w-[72px] h-[72px] rounded-full bg-white'>
+                  <Image
+                    src="/client-1.png"
+                    alt="Descrição da imagem"
+                    width={272}
+                    height={364}
+                  />
+                  </div>
                   <div className='flex flex-col items-start justify-start w-full'>
-                    <h1 className='font-bold text-2xl text-center'>Lucas Lima</h1>
+                    <h1 className='font-bold text-2xl text-center'>Gisele Allebrandte</h1>
                     <div className='flex flex-row items-center justify-between w-full'>
-                      <h2 className='font-medium text-sm text-center text-black'>Barbeiro</h2>
+                      <h2 className='font-medium text-sm text-center text-black'>Cliente</h2>
                       <div className='flex flex-row items-center justify-center'>
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
-                        <Star size={22} color="#ffa033" weight="regular" />
+                        <Star size={22} color="#ffa033" weight="fill" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <h1 className='font-bold text-2xl text-center'>It was a very good experience</h1>
+                <h1 className='font-bold text-2xl text-center'></h1>
                 <p className='font-medium text-sm text-center text-black'>
                   <Balancer>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
+                  Segurança e confiança é isso que a plataforma Rich Beauty proporciona para nós profissionais e também para os clientes que buscam os  serviços.
                   </Balancer>
                 </p>
               </div>
             </SplideSlide>
             <SplideSlide>
-              <div className='w-full max-w-[396px] h-[423px] bg-white-gray flex flex-col items-center justify-center px-5 shadow-lg rounded-xl gap-6'>
-                <div className='flex flex-row items-center justify-start w-full gap-3'>
-                  <div className='w-[72px] min-w-[72px] h-[72px] rounded-full bg-white'></div>
+              <div className='w-full max-w-[396px] h-[423px] bg-white-gray flex flex-col items-center justify-start px-5 shadow-lg rounded-xl gap-6'>
+                <div className='flex flex-row items-center justify-start w-full gap-3 mt-10'>
+                  <div className='w-[72px] min-w-[72px] h-[72px] rounded-full bg-white'>
+                    <Image
+                      src="/client-2.png"
+                      alt="Descrição da imagem"
+                      width={272}
+                      height={364}
+                    />
+                  </div>
                   <div className='flex flex-col items-start justify-start w-full'>
-                    <h1 className='font-bold text-2xl text-center'>Lucas Lima</h1>
+                    <h1 className='font-bold text-2xl text-center'>Ingrid Oliveira</h1>
                     <div className='flex flex-row items-center justify-between w-full'>
-                      <h2 className='font-medium text-sm text-center text-black'>Barbeiro</h2>
+                      <h2 className='font-medium text-sm text-center text-black'>Cliente</h2>
                       <div className='flex flex-row items-center justify-center'>
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
-                        <Star size={22} color="#ffa033" weight="regular" />
+                        <Star size={22} color="#ffa033" weight="fill" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <h1 className='font-bold text-2xl text-center'>It was a very good experience</h1>
+                <h1 className='font-bold text-2xl text-center'></h1>
                 <p className='font-medium text-sm text-center text-black'>
                   <Balancer>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
+                  Atendimento nota mil. Tiraram todas as minhas duvidas.
                   </Balancer>
                 </p>
               </div>
             </SplideSlide>
             <SplideSlide>
-              <div className='w-full max-w-[396px] h-[423px] bg-white-gray flex flex-col items-center justify-center px-5 shadow-lg rounded-xl gap-6'>
-                <div className='flex flex-row items-center justify-start w-full gap-3'>
-                  <div className='w-[72px] min-w-[72px] h-[72px] rounded-full bg-white'></div>
+              <div className='w-full max-w-[396px] h-[423px] bg-white-gray flex flex-col items-center justify-start px-5 shadow-lg rounded-xl gap-6'>
+                <div className='flex flex-row items-center justify-start w-full gap-3 mt-10'>
+                  <div className='w-[72px] min-w-[72px] h-[72px] rounded-full bg-white'>
+                    <Image
+                        src="/client-3.png"
+                        alt="Descrição da imagem"
+                        width={272}
+                        height={364}
+                    />
+                  </div>
                   <div className='flex flex-col items-start justify-start w-full'>
-                    <h1 className='font-bold text-2xl text-center'>Lucas Lima</h1>
+                    <h1 className='font-bold text-2xl text-center'>Adriano</h1>
                     <div className='flex flex-row items-center justify-between w-full'>
-                      <h2 className='font-medium text-sm text-center text-black'>Barbeiro</h2>
+                      <h2 className='font-medium text-sm text-center text-black'>Profissional</h2>
                       <div className='flex flex-row items-center justify-center'>
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
                         <Star size={22} color="#ffa033" weight="fill" />
-                        <Star size={22} color="#ffa033" weight="regular" />
+                        <Star size={22} color="#ffa033" weight="fill" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <h1 className='font-bold text-2xl text-center'>It was a very good experience</h1>
+                <h1 className='font-bold text-2xl text-center'></h1>
                 <p className='font-medium text-sm text-center text-black'>
                   <Balancer>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim arcu. Elementum felis magna pretium in tincidunt. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu.
+                    Simplesmente encantado! Além do serviço delivery, eles ainda dão várias dicas a nós, profissionais, e uma acessoria excelente, ajudando-nos a  melhorar sempre. Estou, realmente, muito satisfeito e cada vez mais contente com o ótimo atendimento e presteza.
                   </Balancer>
                 </p>
               </div>
