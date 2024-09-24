@@ -85,7 +85,7 @@ export default function SectionContact() {
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
               <Phone size={24} color="#ffffff" weight="fill" />
               <p className="text-gray-200 text-xs md:text-base font-normal md:text-start">
-                (31)99999-9999
+                (48) 99986-7969
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
@@ -97,7 +97,7 @@ export default function SectionContact() {
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
               <MapPin size={24} color="#ffffff" weight="fill" />
               <p className="text-gray-200 text-xs md:text-base font-normal text-center md:text-start">
-                132 Dartmouth Street Boston, Massachusetts 02156 United States
+                Rodovia SC, 401 4100 - Km4 - Saco Grande, Florianópolis - SC, 88032-005
               </p>
             </div>
           </div>

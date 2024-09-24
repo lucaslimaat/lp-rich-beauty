@@ -7,11 +7,13 @@ export default function Benefits() {
   return (
     <div className="bg-white w-full h-auto flex flex-col items-center">
       <div className="bg-white w-full h-auto flex flex-col items-center my-24 gap-20">
-        <h1 className="text-5xl font-normal">Benefícios</h1>
-        <p className="text-3xl md:text-3xl font-light text-center">
-          <Balancer>Quais as vantagens?</Balancer>
-        </p>
-
+        <div className="flex flex-col items-center gap-8">
+          <h1 className="text-5xl font-normal">Benefícios</h1>
+          <p className="text-3xl md:text-3xl font-light text-center">
+            <Balancer>Quais as vantagens?</Balancer>
+          </p>
+        </div>
+        
         <div className="bg-white w-full h-auto flex flex-wrap items-center justify-evenly gap-20 md:gap-0">
           <div className="flex flex-col items-center gap-4">
             <UserCircle size={72} color="#00cbc8" />
