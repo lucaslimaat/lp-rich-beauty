@@ -9,7 +9,7 @@ export default function Feedbacks() {
   return (
     <div className="bg-white w-full h-auto flex flex-col items-center">
       <div className="bg-white w-full h-auto flex flex-col items-center my-24 gap-20">
-        <h1 className='text-5xl font-normal text-center'>O que nossos parceiros dizem</h1>
+        <h1 className='text-5xl font-normal text-center mx-4'> <Balancer>O que nossos parceiros dizem</Balancer></h1>
         <div className='w-full h-[500px] max-w-[1258px] mx-auto px-4 py-4 my-4'>
           <Splide
             options={{
