@@ -1,6 +1,7 @@
 'use client'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -19,11 +20,12 @@ export default function Hero() {
             </Balancer>
           </p>
           
-          <button 
-            className='px-10 h-12 rounded-full border-2 border-green bg-green text-white font-semibold transition-transform duration-300 transform hover:scale-105 hover:bg-dark-green'
+          <Link
+            href="#howWorks"
+            className=' flex items-center justify-center px-10 h-12 rounded-full border-2 border-green bg-green text-white font-semibold transition-transform duration-300 transform hover:scale-105 hover:bg-dark-green'
           >
             Saiba Mais
-          </button>
+          </Link>
         </div>
         <div className='w-[517px] h-auto flex flex-wrap items-center justify-center gap-32 mx-4'>
           <Image

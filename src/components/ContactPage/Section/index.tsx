@@ -91,7 +91,7 @@ export default function SectionContact() {
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
               <Envelope size={24} color="#ffffff" weight="fill" />
               <p className="text-gray-200 text-xs md:text-base font-normal md:text-start">
-                demo@gmail.com
+                richbeautydelivery@gmail.com
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">

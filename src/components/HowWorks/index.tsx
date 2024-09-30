@@ -8,7 +8,7 @@ import {
 
 export default function HowWorks() {
   return (
-    <div className="bg-white-gray w-full h-auto flex flex-col items-center ">
+    <div id="howWorks" className="bg-white-gray w-full h-auto flex flex-col items-center ">
       <div className="bg-white-gray w-full h-auto flex flex-col items-center my-24 gap-20">
         <h1 className=" text-5xl font-normal mx-4 text-center">Como funciona?</h1>
         <div className="bg-white-gray w-full h-auto flex flex-wrap items-center justify-evenly gap-20 md:gap-0">

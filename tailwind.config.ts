@@ -19,6 +19,7 @@ const config: Config = {
         900: '#565656',
       },
       'green': '#00cbc8',
+      'light-green' :'#e5faf9',
       'red': '#fd1018',
       'black': '#000000'
     },
