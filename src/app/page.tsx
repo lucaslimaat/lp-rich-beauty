@@ -1,4 +1,5 @@
 import Benefits from '@/components/Benefits'
+import SectionContact from '@/components/ContactPage/Section'
 import EmailCapitation from '@/components/EmailCapitation'
 import Feedbacks from '@/components/Feedbacks'
 import Hero from '@/components/Hero'
@@ -14,7 +15,8 @@ export default function Home() {
       <News />
       <Benefits />
       <Feedbacks />
-      
+      <Partners />
+      <SectionContact />
       <EmailCapitation />
     </main>
   )

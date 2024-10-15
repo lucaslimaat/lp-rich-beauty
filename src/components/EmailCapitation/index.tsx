@@ -40,7 +40,7 @@ export default function EmailCapitation() {
       toast.info('Aguarde, você está sendo redirecionado para o nosso formulário.')
 
       setTimeout(() => {
-        router.push('/Contato')
+        router.push('https://www.richbeautybrasil.com.br/register/seller')
       }, 3000)
     }, 1000)
   }
@@ -48,7 +48,7 @@ export default function EmailCapitation() {
   return (
     <div
       id="parceiro"
-      className="bg-white w-full h-auto flex flex-col items-center"
+      className="bg-white-gray w-full h-auto flex flex-col items-center"
     >
       <div className="w-full h-auto flex flex-col items-center my-24 gap-20">
         <h1 className=" text-5xl font-normal text-center">

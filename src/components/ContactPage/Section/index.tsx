@@ -1,5 +1,5 @@
 'use client'
-import { Envelope, MapPin, Phone } from 'phosphor-react'
+import { Envelope, Globe, Phone } from 'phosphor-react'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import Balancer from 'react-wrap-balancer'
 import emailjs from '@emailjs/browser'
@@ -64,7 +64,7 @@ export default function SectionContact() {
   return (
     <div className="bg-white w-full h-auto flex flex-col items-center justify-center gap-5 md:gap-12 py-14">
       <div className="bg-white w-full h-auto flex flex-col items-center gap-[10px]">
-        <h1 className="text-5xl font-bold">Nos Contate</h1>
+        <h1 className="text-5xl font-normal">Fale Conosco</h1>
         <p className="text-lg md:text-lg font-medium text-center text-gray-300">
           <Balancer>
             Alguma pergunta ou observação? Basta nos escrever uma mensagem!
@@ -89,15 +89,15 @@ export default function SectionContact() {
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
-              <Envelope size={24} color="#ffffff" weight="fill" />
+              <Envelope size={24} color="#ffffff" weight="regular" />
               <p className="text-gray-200 text-xs md:text-base font-normal md:text-start">
-                richbeautydelivery@gmail.com
+                contato@richbeautybrasil.com.br
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
-              <MapPin size={24} color="#ffffff" weight="fill" />
+              <Globe size={24} color="#ffffff" weight="regular" />
               <p className="text-gray-200 text-xs md:text-base font-normal text-center md:text-start">
-                Rodovia SC, 401 4100 - Km4 - Saco Grande, Florianópolis - SC, 88032-005
+                www.richbeautybrasil.com.br
               </p>
             </div>
           </div>

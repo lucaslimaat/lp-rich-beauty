@@ -10,13 +10,13 @@ export default function Hero() {
         <div className=' w-full max-w-[517px] h-auto flex flex-col items-center md:items-start justify-center md:gap-[40px] gap-5 mx-4'>
           <h1 className=' text-[32px] md:text-[40px] font-bold text-center md:text-start leading-[48px]'>
             <Balancer>
-              Saiba como vender mais nas áreas de saúde, beleza e bem-estar!
+              Faça parte do nosso ecossistema e amplie o alcance do seu negócio!
             </Balancer>
           </h1>
           
           <p className=' text-xl font-medium  text-gray-900 text-center md:text-start'>
             <Balancer>
-              Conheça nosso programa de parcerias e aumente suas vendas e o alcance de seu negócio.
+              Saiba como vender mais nas áreas de saúde, beleza e bem-estar! Conheça nosso programa de parcerias para aumentar as vendas e o alcance de seu negócio.
             </Balancer>
           </p>
           
@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
         <div className='w-[517px] h-auto flex flex-wrap items-center justify-center gap-32 mx-4'>
           <Image
-              src="/hero-image.svg" 
+              src="/hero-image2.svg" 
               alt="Hero Image"
               width={517} 
               height={364} 

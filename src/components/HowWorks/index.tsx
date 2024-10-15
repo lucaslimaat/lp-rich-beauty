@@ -16,13 +16,13 @@ export default function HowWorks() {
             <NumberCircleOne size={72} color="#00cbc8" />
             <p className=" font-bold text-base">Cadastre-se</p>
             <p className=" font-medium text-sm max-w-52 text-center">
-              <Balancer>Inscreva-se em nosso marketplace..</Balancer>
+              <Balancer>Inscreva-se em nosso marketplace.</Balancer>
             </p>
           </div>
 
           <div className=" flex flex-col items-center gap-4">
             <NumberCircleTwo size={72} color="#00cbc8" />
-            <p className=" font-bold text-base">Lista de Produtos/Serviços</p>
+            <p className=" font-bold text-base">Inclua Produtos/Serviços</p>
             <p className=" font-medium text-sm max-w-56 text-center">
               <Balancer>Publique suas ofertas na plataforma.</Balancer>
             </p>

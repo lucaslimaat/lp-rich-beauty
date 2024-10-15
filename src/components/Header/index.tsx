@@ -37,7 +37,7 @@ export default function Header() {
               <button 
                 className="px-10 h-12 rounded-full border-2 border-green bg-green text-white font-semibold transition-transform duration-300 transform hover:scale-105 hover:bg-dark-green"
               >
-                QUERO SER PARCEIRO
+                QUERO FAZER PARTE
               </button>
             </Link>
           </div>
